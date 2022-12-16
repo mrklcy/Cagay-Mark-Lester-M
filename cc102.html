@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>CC102</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css.map">
+</head>
+<body>
+  <section>
+    <div class="header">
+      <nav>
+        <p>M4RRKYY</p>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="cc101.html">CC101</a></li>
+            <li><a href="cc102.html">CC102</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100085396233826">LET BE FRIENDS</a></li>
+          </ul>
+        </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      
+      <a href="cc102.html" class="button">Source Code</a>
+       	<a href="out.html" class="button">Output</a>
+    <div class="source">
+    <p>import java.util.Scanner; <br>
+
+public class Finals{ <br>
+	
+	static Scanner sc = new Scanner(System.in); <br>
+	
+		public static void display_program() { <br>
+			
+			int correct = 0; <br>
+			int incorrect = 0;<br>
+			int questions =  20; <br>
+			
+			System.out.print("\n"); <br>
+			System.out.println("Quiz multiple choices"); <br>
+			
+			System.out.print("\n"); <br>
+			
+			String[][] Ques_Ans = { <br>
+		
+{"Who is the first programmer?" , "\n A. Ada lovelace \n B. Mark Zuckerberg \n C. Bill gates \n D. Peter pan\n" , "A"}, <br>
+{"Who is the founder of microsoft?" , "\n A.Bill Allen \n B. Peter Norton \n C. Bill Gates \n D. MArk Cuban\n" , "C"}, <br>
+{"Who is the founder of facebook?" , "\n A. Bill gates \n B. Mark Zukerberg \n C. Peter Norton \n D. Lapu lapu\n " , "B"}, <br>
+{"When was programming invented?" , "\n A. 1986 \n B. 1873 \n C. 1750 \n D. 1883\n" , "D"}, <br>
+{"when was java created?" , "\nA. 1995 \n B. 1996 \n C. 1997 \n D. 1994\n" , "A"}, <br>
+{"Who invented java?" , "\n A. Bill Gates \n B. James Gosling \n C. Ada Lovelace \n D. Mark Colin\n", "B"}, <br>
+{"What is the function of control v?" , "\n A.Copy \n B. Refresh \n C. Paste \n D. Delete\n" , "C"}, <br>
+{"What is the function of control c?" , "\n A. Copy \n B. Paste \n C. Delete \n D. Refesh\n", "A"}, <br>
+{"All of these are programming language except?" , "\n A. Java \n B. Python \n C. Html \n D. C\n" , "C"}, <br>
+{"What does PC stand for" , "\n A. Personal Computer \n B. Private Cash \n C. Public Class \n D. Property Close\n" , "A"}, <br>
+{"It is a malicious file or data that can be affect to our gadgets?" , "\n A. Virus \n B. Data \n C. File \n D. Project\n" ,"A"}, <br>
+{"What does AFK stand for?" , "\n A. All For Kiss \n B. Away From Keyboard \n C. None of the Above \n D. C\n" , "B"}, <br>
+{"What does AI means?" , "\n A. Air Infornation \n B. Artificial Intelligence \n C. All In \n D. Akin Ikaw\n" , "B"}, <br>
+{"Who invented C language?" , "\n A. Bill Gates \n B. James Colin \n C. Dennis Ritchie \n D. Cardo Dalisay\n ", "C"}, <br>
+{"Who is the founder of python?" , "\n A. Guido Rossum \n B. Dennis Ritchie \n C. James Gosling \n D. Tommy Jones\n" , "A"}, <br>
+{"What year was google created?" , "\n A. 1996 \n B. 1997 \n C. 1995 \n D. 1998\n" , "D"}, <br>
+{"Who is the founders of google?" , "\n A. Larry Page and Sergey Brin \n B. Dennis Ritchie and Bill Gates \n C. Ada Lovelace and Mark Zuckerberg \n D. James Gosling and Guido Rossum\n", "A"}, <br>
+{"Who is the father of Cybersecurity?" , "\n A. Kevin Mitnick \n B. Kevin Poulsen \n C. Bob Thomas \n D. Albert Gonzalez\n" , "C"}, <br>
+{"What is the meaning of IT?" , "\n A. Information Technology \n B. Identification Technology \n C. Information Together \n D. Identification Together\n" , "A"}, <br>
+{"Who created the term information technology?" , "\n A. Bob Thomas and James Gosling \n B. Harold Leavit and Thomas Whisler \n C. Larry Page and Sergey Brin \n D. Mark Zuckerberg and Bill Gates\n" , "B"}}; <br><br>
+ 
+
+
+
+	
+	String[] user_ans = new String[(int) questions]; <br>
+	int i =0; <br>
+	
+	do { <br>
+			System.out.print("" + (i+1) + ". " + Ques_Ans[i][0] + "  "+Ques_Ans[i][1]); <br>
+			user_ans[i] = <br> String.valueOf(sc.next().charAt(0)); <br>
+			
+			if(Ques_Ans[i][2].equals(user_ans[i].toUpperCase())) { <br>
+				
+				System.out.println("\n Correct Answer!"); <br>
+				
+				correct++; <br>
+			} <br>
+			
+			else { <br>
+				System.out.println("\n Incorrect. The correct ans is "+Ques_Ans[i][2]); <br>
+				incorrect++; <br>
+			} <br>
+			
+			System.out.print("\n"); <br>
+			i++; <br>
+			
+	}while(i<questions); <br>
+	
+	System.out.print("\n"); <br>
+	System.out.print("\t===== DISPLAY RESULTS ====="); <br>
+	System.out.print("\n"); <br>
+	System.out.println("\n Number of correct answers: " + correct); <br>
+	System.out.println("\n Number of incorrect ans: " + incorrect); <br>
+	System.out.print("\n"); <br>
+	System.out.print("\tEnd of program"); <br>
+	System.out.print("\n"); <br>
+	System.exit(0); <br>
+		} <br>
+		
+		public static void main (String[] args){ <br>
+			display_program(); <br>
+			
+		} <br>
+	} 
+	</p>
+    </div>
+      
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!----------- FOOTER ------- -->
+    <section class="footer">
+      <h4>JEREMIAH 29:11</h4>
+      <p>For I know the plans I have for you,” declares the Lord, <br> “plans to prosper you and not to harm you, plans to give you hope and a future.</p>
+      <div class="icons">
+          <i class="fa fa-facebook"></i>
+         <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+           <i class="fa fa-spotify"></i>
+      </div>
+      <p>©2022 Mark Lester Cagay | All reserve</p>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+ 
+ <!----------JavaScript toogle menu------   -->
+  
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+    
+  </script>
+  
+</body>
+</html>
